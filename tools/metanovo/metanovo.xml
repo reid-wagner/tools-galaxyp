@@ -4,6 +4,7 @@
   </description>
   <requirements>
     <requirement type="package" version="@TOOL_VERSION@">metanovo</requirement>
+    <requirement type="package" version="1.06">bc</requirement>
   </requirements>
   <macros>
     <token name="@TOOL_VERSION@">1.9.4</token>
