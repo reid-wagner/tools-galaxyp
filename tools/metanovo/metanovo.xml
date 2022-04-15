@@ -324,7 +324,7 @@ novor_mass_analyzer=Trap
       </output>
     </test>
     <test expect_num_outputs="2">
-      <param name="input_type.type" value="collection"/>
+      <param name="type" value="collection"/>
       <param name="input_mgf_collection">
         <collection type="list">
           <element name="really_small" value="reall_small.mgf" />
