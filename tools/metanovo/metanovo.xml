@@ -313,7 +313,7 @@ novor_mass_analyzer=Trap
       <output name="output_csv" ftype="csv">
           <assert_contents>
               <!-- Check header. -->
-              <has_text text=",index,Accession,Record,ID,PeptideCount,Peptides,ScanCount,Scans,Organism,Length,File,Summed_NSAF,Protein_Prob,Organism_Prob,MSMS_Percent,Combined_Prob"/>
+              <has_text text=",index,Accession,Record,ID,PeptideCount,Peptides,ScanCount,Scans,Organism,Length,File,Sample sample_data_1 (msms),SAF sample_data_1,NSAF sample_data_1,Summed_NSAF,Protein_Prob,Organism_Prob,MSMS_Percent,Combined_Prob"/>
           </assert_contents>
       </output>
       <!-- We expect all of the proteins in the input data to be matched -->
@@ -331,7 +331,7 @@ novor_mass_analyzer=Trap
       <output name="output_csv" ftype="csv">
           <assert_contents>
               <!-- Check header. -->
-              <has_text text=",index,Accession,Record,ID,PeptideCount,Peptides,ScanCount,Scans,Organism,Length,File,Summed_NSAF,Protein_Prob,Organism_Prob,MSMS_Percent,Combined_Prob"/>
+              <has_text text=",index,Accession,File,ID,Length,Organism,PeptideCount,Peptides,Record,SAF sample_data_1,SAF sample_data_2,Sample sample_data_1 (msms),Sample sample_data_2 (msms),ScanCount,Scans,NSAF sample_data_1,NSAF sample_data_2,Summed_NSAF,Protein_Prob,Organism_Prob,MSMS_Percent,Combined_Prob"/>
           </assert_contents>
       </output>
       <!-- We expect all of the proteins in the input data to be matched -->
