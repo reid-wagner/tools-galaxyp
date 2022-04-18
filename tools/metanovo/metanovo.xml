@@ -308,42 +308,34 @@ novor_mass_analyzer=Trap
   </outputs>
   <tests>
     <test expect_num_outputs="2">
-      <param name="input_mgf" value="really_small.mgf" ftype="mgf"/>
-      <param name="input_fasta" value="really_small.fasta" ftype="fasta"/>
+      <param name="input_mgf" value="sample_data_1.mgf" ftype="mgf"/>
+      <param name="input_fasta" value="sample_fasta_single.fasta" ftype="fasta"/>
       <output name="output_csv" ftype="csv">
           <assert_contents>
-              <!-- No matches expected, but check header. -->
+              <!-- Check header. -->
               <has_text text=",index,Accession,Record,ID,PeptideCount,Peptides,ScanCount,Scans,Organism,Length,File,Summed_NSAF,Protein_Prob,Organism_Prob,MSMS_Percent,Combined_Prob"/>
           </assert_contents>
       </output>
-      <output name="output_fasta" ftype="fasta">
-          <assert_contents>
-              <!-- No matches expected -->
-              <has_size value="0"/>
-          </assert_contents>
-      </output>
+      <!-- We expect all of the proteins in the input data to be matched -->
+      <output name="output_fasta" ftype="fasta" file="sample_fasta_single.fasta">
     </test>
     <test expect_num_outputs="2">
       <param name="type" value="collection"/>
       <param name="input_mgf_collection">
         <collection type="list">
-          <element name="really_small.mgf" value="really_small.mgf" />
-          <element name="really_small_alt.mgf" value="really_small_alt.mgf" />
+          <element name="sample_data_1.mgf" value="sample_data_1.mgf" />
+          <element name="sample_data_2.mgf" value="sample_data_2.mgf" />
         </collection>
       </param>
-      <param name="input_fasta" value="really_small.fasta" ftype="fasta"/>
+      <param name="input_fasta" value="sample_fasta_single.fasta" ftype="fasta"/>
       <output name="output_csv" ftype="csv">
           <assert_contents>
-              <!-- No matches expected, but check header. -->
+              <!-- Check header. -->
               <has_text text=",index,Accession,Record,ID,PeptideCount,Peptides,ScanCount,Scans,Organism,Length,File,Summed_NSAF,Protein_Prob,Organism_Prob,MSMS_Percent,Combined_Prob"/>
           </assert_contents>
       </output>
-      <output name="output_fasta" ftype="fasta">
-          <assert_contents>
-              <!-- No matches expected -->
-              <has_size value="0"/>
-          </assert_contents>
-      </output>
+      <!-- We expect all of the proteins in the input data to be matched -->
+      <output name="output_fasta" ftype="fasta" file="sample_fasta_collection.fasta">
     </test>
   </tests>
   <help><![CDATA[
