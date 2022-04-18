@@ -327,7 +327,7 @@ novor_mass_analyzer=Trap
       <param name="type" value="collection"/>
       <param name="input_mgf_collection">
         <collection type="list">
-          <element name="really_small" value="reall_small.mgf" />
+          <element name="really_small" value="really_small.mgf" />
           <element name="really_small_alt" value="really_small_alt.mgf" />
         </collection>
       </param>
