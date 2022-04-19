@@ -317,7 +317,7 @@ novor_mass_analyzer=Trap
           </assert_contents>
       </output>
       <!-- We expect all of the proteins in the input data to be matched -->
-      <output name="output_fasta" ftype="fasta" file="sample_fasta_single.fasta"/>
+      <output name="output_fasta" ftype="fasta" file="sample_output_single.fasta"/>
     </test>
     <test expect_num_outputs="2">
       <param name="type" value="collection"/>
@@ -327,7 +327,7 @@ novor_mass_analyzer=Trap
           <element name="sample_data_2.mgf" value="sample_data_2.mgf" />
         </collection>
       </param>
-      <output name="output_fasta" ftype="fasta" file="sample_output_single.fasta"/>
+      <param name="input_fasta" value="sample_fasta_collection.fasta" ftype="fasta"/>
       <output name="output_csv" ftype="csv">
           <assert_contents>
               <!-- Check header. -->
