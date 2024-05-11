@@ -177,7 +177,7 @@
         <param name="license_agreements" value="true"/>
         <!-- wagnerr test -->
         <param name="workflow_only" value="true"/>
-        <param name="run_protein_prophet" value="false"/>
+        <!-- <param name="run_protein_prophet" value="false"/> -->
         <!--
         <output name="concat_psm_tsv" ftype="tabular">
             <assert_contents>

@@ -423,17 +423,18 @@ sed "s#^database.db-path.*#\database.db-path=\$DB#" $workflow_configfile > fp.wo
 
     <!-- Set ProteinProphet workflow options -->
     <token name="@PROTEINPROPHET@"><![CDATA[
-     #set $prfx = $wf.validation.validation_tab.protein_prophet
-      #if $prfx.run_protein_prophet == 'true'
-      #set $prfx = $wf.validation.validation_tab.protein_prophet.protein_prophet_opts
-        #set $wfdict['protein-prophet.run-protein-prophet'] = 'true'
-        #set $cmd_opts = [str($prfx.iprophet),str($prfx.nonsp),str($prfx.subgroups),str($prfx.unmapped)]
-        #silent $cmd_opts.append('--maxppmdiff ' + str($prfx.maxppmdiff))
-        #silent $cmd_opts.append('--minprob ' + str($prfx.minprob))
-        #set $wfdict['protein-prophet.cmd-opts'] = ' '.join($cmd_opts).strip()
-      #else
-        #set $wfdict[protein-prophet.run-protein-prophet] = 'false'
-      #end if
+     #set $wfdict[protein-prophet.run-protein-prophet] = 'false'
+     ## #set $prfx = $wf.validation.validation_tab.protein_prophet
+     ##  #if $prfx.run_protein_prophet == 'true'
+     ##    #set $prfx = $wf.validation.validation_tab.protein_prophet.protein_prophet_opts
+     ##    #set $wfdict['protein-prophet.run-protein-prophet'] = 'true'
+     ##    #set $cmd_opts = [str($prfx.iprophet),str($prfx.nonsp),str($prfx.subgroups),str($prfx.unmapped)]
+     ##    #silent $cmd_opts.append('--maxppmdiff ' + str($prfx.maxppmdiff))
+     ##    #silent $cmd_opts.append('--minprob ' + str($prfx.minprob))
+     ##    #set $wfdict['protein-prophet.cmd-opts'] = ' '.join($cmd_opts).strip()
+     ##  #else
+     ##    #set $wfdict[protein-prophet.run-protein-prophet] = 'false'
+     ##  #end if
     ]]></token>
 
     <!-- Validation options. Includes PeptideProphet, Percolator, MSBooster, ProteinProphet, and CrystalC -->

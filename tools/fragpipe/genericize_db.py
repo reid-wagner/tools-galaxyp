@@ -12,7 +12,7 @@ output_db_file = sys.argv[2]
 with open(input_db_file) as f:
     input_db = f.readlines()
 
-subbed_lines = [re.sub(r'^>(?!sp\||tr\||db\||AP_|NP_|YP_|XP_|WP_|ENSP|UniRef|nxp|generic)', '>generic|', l) for l in input_db]
+subbed_lines = [re.sub(r'^>(?!sp\||tr\||db\||AP_|NP_|YP_|XP_|WP_|ENSP|UniRef|nxp|generic)', '>generic|', line) for line in input_db]
 
 with open(output_db_file, 'w') as f:
     f.writelines(subbed_lines)
