@@ -6,9 +6,7 @@
         <requirements>
             <requirement type="package" version="@TOOL_VERSION@">fragpipe</requirement>
             <!-- wagnerr test: addition of zlib -->
-            <!--
             <requirement type="package" version="1.2.13">zlib</requirement>
-            -->
         </requirements>
     </xml>
 
